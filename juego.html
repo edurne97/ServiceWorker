@@ -6,15 +6,15 @@
   <title>Damas inglesas</title>
   <script src="./juego.js"></script>
   <script> 
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('./serviceWorker.js')
-        .then(registration => {
-            console.log('Registration successfull with scope: ', registration.scope);
-        })
-        .catch(err => {
-            console.log('Registration failed: ', err);
-        });
-}
+	 if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('./service-worker.js').then(function(registration) {
+				
+			 console.log('ServiceWorker registration successful with scope: ', registration.scope);
+			}).catch(function(err) {
+			   
+			  console.log('ServiceWorker registration failed: ', err);
+			});
+		}
   </script>
 </head>
 
